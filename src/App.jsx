@@ -17,10 +17,7 @@ function App() {
   const current = history[currentMove]
 
   const {winner,winningSquares} = calculateWinner(current.board)
-  console.log("history:", history)
-  const message = winner ? `Winner is ${winner}`: `Next player is ${current.isXNext ? 'X' : 'O'}`
-
-
+  
     const handleSquareClick = (position) => {
         if( current.board[position] || winner)
             return
@@ -48,7 +45,7 @@ function App() {
 
   return (
     <div className='app'>
-      <h1>TIC TAC TOE</h1>
+      <h1>TIC <span className='text-green'>TAC</span> TOE</h1>
       <StatusMessage winner={winner} current={current}/>
       <Board board={current.board} handleSquareClick={handleSquareClick} winningSquares={winningSquares}/>
       <button type="button" onClick={onNewGame}>Start New Game</button>
