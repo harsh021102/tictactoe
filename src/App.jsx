@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Board from './components/Board';
 import History from './components/History';
+import StatusMessage from './components/StatusMessage';
 import { calculateWinner } from './helpers';
 import "./styles/root.scss"
 function App() {
@@ -41,7 +42,7 @@ function App() {
   return (
     <div className='app'>
       <h1>TIC TAC TOE</h1>
-      <h1>{message}</h1>
+      <StatusMessage winner={winner} current={current}/>
       <Board board={current.board} handleSquareClick={handleSquareClick}/>
       <History history={history} moveTo={moveTo} currentMove={currentMove}/>
     </div>
