@@ -16,13 +16,13 @@ export function calculateWinner(squares) {
         {
             // return squares[a]
             return {
-                winnner: squares[a],
+                winner: squares[a],
                 winningSquares: [a, b , c]
             }
         }
     }
     return {
-        winnner: null,
+        winner: null,
         winningSquares: []
     }
 }

@@ -7,7 +7,7 @@ const History = ({history,moveTo ,currentMove}) => {
           {
             history.map((data,move)=>
             <li key={move}>
-                  <button className={`btn-move ${move===currentMove? ' active': ''}`} type="button" onClick={()=>{
+                  <button className={`btn-move ${move===currentMove? 'active': ''}`} type="button" onClick={()=>{
                     moveTo(move)
                   }}>{move === 0 ? 'Go to start': `Go to move #${move}`}</button>
               </li>
